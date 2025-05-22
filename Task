@@ -1,0 +1,31 @@
+Activity 5 - Problems
+
+1. List Customers from Germany with Their Orders
+Requirement: Show CustomerName, ContactName, OrderID, and OrderDate for customers in Germany who have placed an order. Order by OrderDate descending.
+
+2. Top 5 Most Expensive Products with Category
+Requirement: Display the ProductName, Price, and CategoryName of the top 5 most expensive products.
+
+3. Orders Shipped by 'Speedy Express'
+Requirement: List OrderID, OrderDate, and CustomerName for orders shipped by Speedy Express.
+
+4. List Products with Supplier and Category Names
+Requirement: Show ProductName, SupplierName, and CategoryName of all products. Sort alphabetically by ProductName.
+
+5. Orders Handled by Employee 'Davolio'
+Requirement: Display OrderID, OrderDate, and CustomerName for orders handled by employee Nancy Davolio.
+
+6. Add a New Customer from Canada
+Requirement: Insert a new customer named "Maple Traders" with contact "Emily Rose", address "123 Maple St", city "Toronto", postal "M5H 2N2", country "Canada".
+
+7. Insert a New Product
+Requirement: Insert a product called "Organic Maple Syrup" under SupplierID = 3, CategoryID = 2, Unit = "500ml bottle", and Price = 15.99.
+
+8. Update City of a Specific Customer
+Requirement: Change city to 'Hamburg' and postal code to '20095' for customer named "Blauer See Delikatessen".
+
+9. Increase Price of Dairy Products by 10%
+Requirement: Increase the Price of all products under category "Dairy Products" by 10%.
+
+10. Delete Shipper 'Federal Shipping'
+Requirement: Delete the shipper with the name "Federal Shipping" from the database.
