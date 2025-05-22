@@ -3,29 +3,75 @@ Activity 5 - Problems
 1. List Customers from Germany with Their Orders
 Requirement: Show CustomerName, ContactName, OrderID, and OrderDate for customers in Germany who have placed an order. Order by OrderDate descending.
 
+SELECT customers. CustomerName, customers ContactName, orders.OrderID, orders. OrderDate
+FROM Customers
+JOIN orders ON customers.customerID = Orders. customerID
+WHERE Customers.Country = 'Germany"
+ORDER BY Orders.OrderDate DESC;
+
 2. Top 5 Most Expensive Products with Category
 Requirement: Display the ProductName, Price, and CategoryName of the top 5 most expensive products.
+
+SELECT Products.ProductName, Suppliers.SupplierName, Categories.CategoryName
+FROM Products
+JOIN Suppliers ON Products.SupplierID = Suppliers.SupplierID
+JOIN Categories ON Products.CategoryID = Categories.CategoryID
+ORDER BY Products.ProductName ASC;
+
 
 3. Orders Shipped by 'Speedy Express'
 Requirement: List OrderID, OrderDate, and CustomerName for orders shipped by Speedy Express.
 
+SELECT Orders.OrderID, Orders.OrderDate, Customers.CustomerName
+FROM Orders
+JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID
+
 4. List Products with Supplier and Category Names
 Requirement: Show ProductName, SupplierName, and CategoryName of all products. Sort alphabetically by ProductName.
+
+JOIN Customers ON Orders.CustomerID = Customers.CustomerID
+WHERE Employees.LastName = 'Davolio';
+
 
 5. Orders Handled by Employee 'Davolio'
 Requirement: Display OrderID, OrderDate, and CustomerName for orders handled by employee Nancy Davolio.
 
+INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+VALUES ('Maple Traders', 'Emily Rose', '123 Maple St', 'Toronto', 'M5H 2N2', 'Canada');
+
+
 6. Add a New Customer from Canada
 Requirement: Insert a new customer named "Maple Traders" with contact "Emily Rose", address "123 Maple St", city "Toronto", postal "M5H 2N2", country "Canada".
+
+INSERT INTO Products (ProductName, SupplierID, CategoryID, Unit, Price)
+VALUES ('Organic Maple Syrup', 3, 2, '500ml bottle', 15.99);
 
 7. Insert a New Product
 Requirement: Insert a product called "Organic Maple Syrup" under SupplierID = 3, CategoryID = 2, Unit = "500ml bottle", and Price = 15.99.
 
+UPDATE Customers
+SET City = 'Hamburg', PostalCode = '20095'
+WHERE CustomerName = 'Blauer See Delikatessen';
+
 8. Update City of a Specific Customer
 Requirement: Change city to 'Hamburg' and postal code to '20095' for customer named "Blauer See Delikatessen".
+
+UPDATE Products
+SET Price = Price * 1.10
+WHERE CategoryID = (
+    SELECT CategoryID FROM Categories WHERE CategoryName = 'Dairy Products'
+);
+
 
 9. Increase Price of Dairy Products by 10%
 Requirement: Increase the Price of all products under category "Dairy Products" by 10%.
 
+SELECT * FROM Orders
+JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID
+WHERE Shippers.ShipperName = 'Federal Shipping';
+
 10. Delete Shipper 'Federal Shipping'
 Requirement: Delete the shipper with the name "Federal Shipping" from the database.
+
+DELETE FROM Shippers
+WHERE ShipperName = 'Federal Shipping';
